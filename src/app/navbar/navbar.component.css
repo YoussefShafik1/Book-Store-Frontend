@@ -7,6 +7,7 @@
   margin-right: 2rem;
   font-weight: 500;
   font-size: 18px;
+  margin-top: 0.6rem;
 }
 .cart a {
   color: #8d28ad;
@@ -47,6 +48,10 @@ li {
 }
 img {
   width: 7rem;
+}
+.logout {
+  font-size: 18px;
+  font-weight: 600;
 }
 
 @media (min-width: 992px) {
