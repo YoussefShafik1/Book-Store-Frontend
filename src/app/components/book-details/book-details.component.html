@@ -1,0 +1,249 @@
+<div class="container mt-5">
+  <div class="row">
+    <!-- Left Section: Book? Info -->
+    <div class="mt-5 col-md-6 p-3 bg-ghostwhite">
+      <div class="d-flex align-items-center mt-4 mb-4 fs-5">
+        <span class="badge bg-white border border-warning text-dark  me-3 ">
+          <span class="text-warning ">
+            ★★★★☆
+          </span>
+          <!--{{book??.rating }}--></span>
+        <span>4.7</span>
+      </div>
+      <p class="fs-3 fw-bold">{{ book.name }}</p>
+      <p class="text-muted">by <strong>{{ book?.author }}</strong></p>
+      <p class="text-secondary">
+        {{ book?.description }}
+      </p>
+      <p class="fs-3 fw-bold ;"style ="color: purple">${{ book?.price }}</p>
+
+      <div class="d-flex align-items-center mt-5 mb-4">
+        <button class="btn btn-light border me-2">-</button>
+        <span class="border px-3 py-1">1</span>
+        <button class="btn btn-light border ms-2">+</button>
+        <button class="btn btn ms-3"style ="background-color: purple ;color: white;"><i class="bi bi-cart "style="color: white;"></i> BUY</button>
+        <button class="btn btn-light ms-2"><i class="bi bi-heart"></i></button>
+      </div>
+    </div>
+
+    <!-- Right Section: Images -->
+    <div class="col-md-4 mt-5">
+      <div class="d-flex mt-3">
+        <img [src]="book?.image" alt="Book? Image" class="flex-grow-1 rounded ms-2" style="height: 400px; object-fit:fill;">
+        <img [src]="book?.image" alt="Book? Image" class="flex-grow-1 rounded ms-2" style="height: 400px;width: 250px; object-fit:fill;">
+        <div class="ms-3">
+          <div class="bg-dark rounded mb-2" style="width: 50px; height: 94px;">
+            <img [src]="book?.image" alt="Book? Image" class="rounded " style="width: 50px; height: 94px;">
+          </div>
+          <div class="bg-dark rounded mb-2" style="width: 50px; height: 94px;">
+            <img [src]="book?.image" alt="Book? Image" class="rounded " style="width: 50px; height: 94px;">
+          </div>
+          <div class="bg-dark rounded mb-2" style="width: 50px; height: 94px;">
+            <img [src]="book?.image" alt="Book? Image" class="rounded " style="width: 50px; height: 94px;">
+
+          </div>
+          <div class="bg-dark rounded" style="width: 50px; height: 94px;">
+            <img [src]="book?.image" alt="Book? Image" class="rounded " style="width: 50px; height: 94px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book? Details -->
+  <div class="container mt-4 mb-3">
+    <div class="row">
+      <div class="col-md-8">
+        <h4 class="fw-bold mb-4">Details</h4>
+        <div class="card shadow-sm">
+          <div class="card-body p-0">
+            <table class="table mb-0 ">
+              <tbody>
+                <tr>
+                  <th class="bg-dark text-white w-25 p-3 ">Book name</th>
+                  <td class="p-3 bg-purble">{{ book?.name }}</td>
+                </tr>
+                <tr>
+                  <th class="bg-dark text-white p-3 ">Author</th>
+                  <td class="p-3">{{ book?.author }}</td>
+                </tr>
+                <tr>
+                  <th class="bg-dark text-white p-3">category</th>
+                  <td class="p-3">{{ book?.category }} </td>
+                </tr>
+                <tr>
+                  <th class="bg-dark text-white p-3">Publisher</th>
+                  <td class="p-3">{{ book?.publisher }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Related Book?s Section -->
+      <div class="col-md-4">
+        <h4 class="fw-bold mb-4">Related books</h4>
+            <div class="d-flex align-items-center">
+              <div class="rounded ms-3 me-3" style="width: 60px; height: 140px;">
+                <img [src]="book?.image" alt="Book Image" class="rounded " style="width: 60px; height: 140px;">
+              </div>
+              
+              <div>
+                <span class="badge bg-orange text-white p-2 mb-2">
+                  <i class="bi bi-star-fill"></i> {{ book.rating }}
+                </span>
+
+                <h6 class="mb-1">{{ book.name }}</h6>
+                <p class="text-purple fw-bold">${{ book.price }}</p>
+                <p class="text-purple fw-bold">{{ book.category }}</p>
+
+              </div>
+            </div>
+          
+        
+      </div>
+      
+    </div>
+  </div>
+  <!-- reviews Section -->
+
+  <div class="container row">
+  <h4 class="fw-bold mt-4 mb-4">Customer Reviews</h4>
+  
+  <div class="row">
+    <!-- Review Summary Card -->
+    <div class="col-md-8">
+      <div class="card shadow-sm p-4">
+        <div class="d-flex align-items-center">
+          <div class="me-4">
+            <h2 class="fw-bold">4.7</h2>
+            <p class="text-muted mb-0">out of 5</p>
+            <div class="text-warning">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+            </div>
+            
+            
+          </div>
+        </div>
+        <div class="col">
+            <div class="card shadow-sm p-3">
+              <!-- 5 Stars -->
+              <div class="d-flex align-items-center">
+                <span class="text-warning">
+                  <i class="bi bi-star-fill"></i> 5
+                </span>
+                <div class="progress flex-grow-1 mx-2" style="height: 8px;">
+                  <div class="progress-bar bg-orange" role="progressbar" style="width: 60%;"></div>
+                </div>
+                <span class="text-muted">60%</span>
+              </div>
+            
+              <!-- 4 Stars -->
+              <div class="d-flex align-items-center">
+                <span class="text-warning">
+                  <i class="bi bi-star-fill"></i> 4
+                </span>
+                <div class="progress flex-grow-1 mx-2" style="height: 8px;">
+                  <div class="progress-bar bg-orange" role="progressbar" style="width: 25%;"></div>
+                </div>
+                <span class="text-muted">25%</span>
+              </div>
+            
+              <!-- 3 Stars -->
+              <div class="d-flex align-items-center">
+                <span class="text-warning">
+                  <i class="bi bi-star-fill"></i> 3
+                </span>
+                <div class="progress flex-grow-1 mx-2" style="height: 8px;">
+                  <div class="progress-bar bg-orange" role="progressbar" style="width: 10%;"></div>
+                </div>
+                <span class="text-muted">10%</span>
+              </div>
+            
+              <!-- 2 Stars -->
+              <div class="d-flex align-items-center">
+                <span class="text-warning">
+                  <i class="bi bi-star-fill"></i> 2
+                </span>
+                <div class="progress flex-grow-1 mx-2" style="height: 8px;">
+                  <div class="progress-bar bg-orange" role="progressbar" style="width: 3%;"></div>
+                </div>
+                <span class="text-muted">3%</span>
+              </div>
+            
+              <!-- 1 Star -->
+              <div class="d-flex align-items-center">
+                <span class="text-warning">
+                  <i class="bi bi-star-fill"></i> 1
+                </span>
+                <div class="progress flex-grow-1 mx-2" style="height: 8px;">
+                  <div class="progress-bar bg-orange" role="progressbar" style="width: 2%;"></div>
+                </div>
+                <span class="text-muted">2%</span>
+            </div>
+            
+            
+          </div>
+        </div>
+       <!-- @for (star of fullStars; track book?.book?_id) {}-->
+
+       
+      </div>
+      
+    </div>
+    
+  </div>
+    
+  </div>
+
+ <!-- <div class="row mb-3" >
+    <div class="col-md-7 rounded card-body p-0">
+      <h4 class="mt-5 mb-4">Book? Details</h4>
+          <table class="table rounded mb-0  " style="border: floralwhite;">
+            <tbody class="border">
+              <tr>
+                <th class="bg-dark text-white w-25 p-3 ">Book? Title</th>
+                <td class="p-3">{{ book?.name }}</td>
+              </tr>
+              <tr>
+                <th class="bg-dark text-white p-3 ">Author</th>
+                <td class="p-3">{{ book?.author }}</td>
+              </tr>
+              <tr>
+                <th class="bg-dark text-white p-3">Category</th>
+                <td class="p-3">{{ book?.category }} </td>
+              </tr>
+              <tr>
+                <th class="bg-dark text-white p-3">Publisher</th>
+                <td class="p-3">{{ book?.publisher }}</td>
+              </tr>
+            </tbody>
+          </table>
+    
+    </div>
+-->
+    <!-- Related Book?s
+    <div class="col-md-4 ms-3">
+      
+      <span class="mt-5 fs-5">Related Book?s</span>
+      @for (related of book?.relatedBook?s; track $index) {
+        <div class="card-body d-flex align-items-center bg-dark text-white mt-3">
+          <img [src]="related.image" alt="Related Book?" style="width: 50px; height: 60px; object-fit: cover;">
+          <div class="ms-3">
+            <h6>{{ related.name }}</h6>
+            <p>${{ related.price }}</p>
+          </div>
+        </div>
+      }
+        
+      </div>
+    </div>
+           -->
+
+  </div>
+
