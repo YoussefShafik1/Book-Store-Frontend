@@ -1,0 +1,23 @@
+<div class="checkout">
+    <div class="left">
+        <div class="titles">Shopping Summary</div>
+        <p class="descriptions">Complete your purchase securely.</p>
+
+        <p><strong style="font-weight: 500;font-size: 20px;">Enter Card Details</strong></p>
+
+        <!-- 🔥 الحقل الموحد الخاص بـ Stripe -->
+        <div #cardElement id="card-element"></div> 
+
+        <p><strong style="font-weight: 500;font-size: 20px;">Have a coupon code?</strong></p>
+        <div class="coupon">
+            <input type="text" placeholder="Enter promo code here">
+            <button>&rarr;</button>
+        </div>
+    </div>
+
+    <div class="right summary">
+        <p>Subtotal <strong>USD {{ totalAmount | number:'1.2-2' }}</strong></p>
+        <button class="checkout-btn" (click)="submitPayment()">CHECKOUT</button>
+        <a href="#" class="continue">Continue Shopping</a>
+    </div>
+</div>

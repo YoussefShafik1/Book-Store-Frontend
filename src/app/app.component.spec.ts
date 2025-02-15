@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'BookStoreFrontend' title`, () => {
+  it(`should have the 'checkout' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('BookStoreFrontend');
+    expect(app.title).toEqual('checkout');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, BookStoreFrontend');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, checkout');
   });
 });

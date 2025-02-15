@@ -1,0 +1,131 @@
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    font-family: "Poppins";
+}
+.checkout {
+    background: url(/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    padding: 40px;
+    margin: 50px 0;
+    border-radius: 10px;
+    width: 70%;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+.left {
+    width: 50%;
+    height: 100%;
+}
+.right {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.titles {
+    font-size: 30px;
+    font-weight: 600;
+    height: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.descriptions {
+    color: #555;
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 18px;
+    margin: 5px 0;
+    height: 35%;
+}
+.coupon {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.coupon input {
+    flex: 1;
+    height: 68px;
+    padding: 10px;
+    border-radius: 12px;
+    background: #D4C0DB;
+    color: #755A7D;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+.coupon button {
+    background-color: #755A7D;
+    height: 68px;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 12px;
+    width: 70px;
+    cursor: pointer;
+    color: white;
+}
+.summary {
+    text-align: right;
+}
+.summary p {
+    margin: 10px 0;
+}
+.summary strong {
+    font-size: 1.2em;
+}
+.checkout-btn {
+    background-color: #8D28AD;
+    height: 68px;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    box-sizing: border-box;
+    margin-top: 15px;
+}
+.continue {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #8D28AD;
+    font-weight: 500;
+    text-decoration: none;
+}
+.right p{
+    width: 100%;
+   display: flex;
+   justify-content: space-between;
+   height: 60px;
+}
+.checkout-btn:hover{
+    background: #4B0543;
+}
+#card-element {
+    padding: 12px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin: 4px;
+  }
+  
