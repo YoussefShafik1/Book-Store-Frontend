@@ -1,0 +1,86 @@
+<!-- test -->
+<div class="testimonial-section topten">
+  <div class="container">
+    <div class="d-flex justify-content-between pb-5">
+      <h2 style="font-weight: bold">10 Top Rated Books</h2>
+      <a class="view-more" href="/books"
+        >View more <img src="./images/right-arr-purple.png" alt="arrow"
+      /></a>
+    </div>
+    <div class="row align-items-center position-relative">
+      <!-- Left Arrow -->
+      <a
+        class="carousel-control-prev"
+        href="#testimonialCarousel"
+        role="button"
+        data-bs-slide="prev"
+      >
+        <div class="arrow">
+          <img src="./images/left-arrow.png" alt="left-arrow" />
+        </div>
+      </a>
+
+      <!-- Right Arrow -->
+      <a
+        class="carousel-control-next"
+        href="#testimonialCarousel"
+        role="button"
+        data-bs-slide="next"
+      >
+        <div class="arrow">
+          <img src="./images/right-arr-purple.png" alt="right-arrow" />
+        </div>
+      </a>
+
+      <!-- Carousel Section -->
+      <div class="right-section d-flex justify-content-center">
+        <div
+          id="testimonialCarousel"
+          class="carousel slide w-100"
+          data-bs-ride="carousel"
+        >
+          <!-- Carousel Inner -->
+          <div class="carousel-inner p-5">
+            @for (chunk of getChunkedBooks(books, 4); track $index; let i =
+            $index) {
+            <div class="carousel-item" [class.active]="i === 0">
+              <div class="d-flex flex-wrap justify-content-center gap-4">
+                @for (book of chunk; track book.book_id) {
+                <div class="d-flex gap-2 flex-column align-items-center">
+                  <div class="d-flex gap-2 flex-column">
+                    <div>
+                      <img
+                        class="carousel-image"
+                        [src]="book.image"
+                        alt="book"
+                      />
+                    </div>
+                    <div>
+                      <img src="./images/rating.png" alt="rating" />
+                    </div>
+                    <h5>{{ book.name }}</h5>
+                    <p>{{ book.author }}</p>
+
+                    <!-- Relative Container for Cart and Button -->
+                    <div class="cart-container">
+                      <div class="cart">
+                        <h4 style="color: #8d28ad; font-weight: bolder">
+                          {{ book.price }} $
+                        </h4>
+                      </div>
+                      <button class="cart-btn" (click)="addToCart(book._id, 1)">
+                        <img src="./images/cart.png" alt="cart" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                }
+              </div>
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="box">
+  <div class="cart">
+    <div class="description">
+      <div id="item">Item</div>
+      <div class="details">
+        <div id="quantity">Quantity</div>
+        <div>Price</div>
+        <div>Total Price</div>
+      </div>
+    </div>
+
+    @for (item of cartItems; track item.bookDetails._id) {
+    <div class="card">
+      <div class="image">
+        <img [src]="item.bookDetails.image" alt="Book Image" />
+      </div>
+      <div class="product-details">
+        <!--  <p style="font-weight: 400;">ISBN {{ item.bookDetails._id }}</p> -->
+        <p style="font-weight: 600">{{ item.bookDetails.name }}</p>
+        <p style="font-weight: 500">{{ item.bookDetails.author }}</p>
+      </div>
+      <div class="counter">
+        <button (click)="decreaseQuantity(item)">-</button>
+        <span>{{ item.quantity }}</span>
+        <button (click)="increaseQuantity(item)">+</button>
+      </div>
+      <div class="price">
+        <p>${{ item.bookDetails.price }}</p>
+      </div>
+      <div class="price">
+        <p>${{ item.bookDetails.price * item.quantity }}</p>
+      </div>
+      <div class="icon">
+        <img src="./images/bin.png" (click)="deleteItem(item)" />
+      </div>
+    </div>
+    }
+  </div>
+</div>

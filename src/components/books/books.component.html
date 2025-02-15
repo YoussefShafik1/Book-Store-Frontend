@@ -1,0 +1,44 @@
+<div class="top">
+  <div style="padding-left: 30px">
+    <h1>Books</h1>
+    <span>Over 475+ books available here, find it now!</span>
+  </div>
+  <div class="books">
+    @for(book of books ;track book._id){
+    <div class="item">
+      <div class="image-container">
+        <a [routerLink]="['/book', book._id]">
+          <div class="filter"></div>
+          <div>
+            <img class="im" src="{{ book.image }}" />
+          </div>
+        </a>
+        <div class="icon">
+          <img
+            src="/images/btnAddtoCart.png"
+            alt=""
+            (click)="addToCart(book._id, 1)"
+          />
+        </div>
+      </div>
+      <div class="star">
+        <div class="d-flex">
+          <img src="/images/star.png" alt="" />
+        </div>
+        <h5>4.7</h5>
+        <h5>166 reviews</h5>
+      </div>
+      <h2 class="AD my-2">{{ book.name }}</h2>
+      <i class="icon fas fa-search"></i>
+      <h2 class="hh my-2">{{ book.author }}</h2>
+      <h6>{{ book.category }}</h6>
+      <h3 class="itemh3 my-1">${{ book.price }}</h3>
+    </div>
+    }
+  </div>
+</div>
+
+<app-features></app-features>
+<app-featured-book></app-featured-book>
+<app-testimonials></app-testimonials>
+<app-subscribe></app-subscribe>

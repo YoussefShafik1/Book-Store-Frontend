@@ -1,0 +1,26 @@
+.testimonials {
+  background-color: rgba(252, 248, 253, 1);
+}
+
+.tes h6 {
+  font-size: 16px;
+  color: #00000079;
+}
+
+.jj img {
+  height: 57px;
+  width: 57px;
+  margin-right: -10px;
+}
+
+/* Ensuring image group wraps nicely on small screens */
+@media (max-width: 768px) {
+  .jj {
+    justify-content: center !important;
+  }
+
+  .jj img {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+}

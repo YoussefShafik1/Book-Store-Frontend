@@ -1,0 +1,56 @@
+.navbar {
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .breadcrumb {
+    background: none;
+  }
+  
+  .card {
+    border-radius: 10px;
+  }
+  .table th {
+    background-color: #343a40 !important;
+    color: white !important;
+  }
+  
+  .table td {
+    vertical-align: middle;
+  }
+  
+  .bg-orange {
+    background-color: #ff8c00 !important;
+    color: white;
+    border-radius: 4px;
+  }
+  
+  .text-purple {
+    color: #6a1b9a;
+  }
+  
+  .card {
+    border-radius: 10px;
+  }
+  
+  .text-warning {
+    color: #ff8c00 !important;
+  }
+  
+  .progress {
+    background-color: #e0e0e0;
+  }
+  
+  .progress-bar {
+    background-color: #ff8c00;
+  }
+  
+  .card {
+    border-radius: 10px;
+  }
+  
+  .btn-light {
+    border-radius: 25px;
+    font-weight: bold;
+  }
+  

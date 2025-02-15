@@ -1,0 +1,140 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    font-family: "Poppins";
+}
+ .box{
+     margin: 10px 0;
+     padding: 5px;
+     border-radius: 10px;
+     width: 70%;
+     height: auto;
+     display: flex;
+     flex-direction: column;
+ }
+ .cart{
+     width: 100%;
+     height: auto;
+ }
+ .description{
+     width: 100%;
+     height: 88px;
+     display: flex;
+     font-size: 20px;
+     font-weight: 600;
+     background-color: #5C067C;
+     color: #FFFFFF;
+     border-radius: 10px;
+     justify-content: center;
+     align-content: center;
+     box-sizing: border-box;
+     flex-direction: row;
+     flex-wrap: wrap;
+ }
+ .details {
+     width: 40%;
+     display:flex ;
+     justify-content: space-around;
+     align-items: center;
+ 
+ }
+ #quantity{
+     width: 40%;
+     
+ }
+ #item{
+     width: 40%;
+     margin-right: 40px;
+ }
+ .card{
+     width: 100%;
+     height: 226px;
+     border-radius: 12px;
+     border: 1px solid #EEDFF3;
+     margin: auto;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     align-items: center;
+     box-sizing: border-box;
+     margin: 25px 0;
+ }
+ .image{
+     width: 140.0194854736328px;
+     height: 200.2484588623047px;
+     background-color: #b4aaaa;
+     margin: auto;
+     border-radius: 20px;
+ }
+ .image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+ }
+ .product-details p{
+    color: #000000;
+    line-height: 21px;
+    margin: auto;
+   
+ }
+ .counter{
+     width: 183px;
+     height: 65px;
+     background-color: #EBEBEB;
+     border-radius: 10px;
+     display: flex;
+     flex-direction: row;    
+     justify-content: space-between;
+     align-items: center;
+     box-sizing: border-box;
+     font-weight: 600;
+     margin: auto;
+ }
+ .counter button{
+     width: 40px;
+     height: 40px;
+     border: none;
+     background-color: #EBEBEB;
+     color: #8D28AD;
+     font-weight:900;
+     font-size: 35px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     cursor: pointer;
+ }
+ .counter button:hover{ 
+     color: #FFFFFF;
+     font-size: 50px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ .price{
+     font-weight: 600;
+     margin: auto;
+ }
+ .icon{
+     width: 30px;
+     height: 30px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     cursor: pointer;
+     margin: auto 40px auto 40px;
+ }
+ .icon img{
+     width: 100%;
+     height: 100%;
+ }

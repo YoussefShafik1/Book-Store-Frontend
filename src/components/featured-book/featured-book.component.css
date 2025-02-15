@@ -1,0 +1,201 @@
+.card {
+  margin-bottom: 20px;
+}
+
+.card-title {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  color: #555;
+  font-size: 0.9em;
+}
+
+.topten {
+  position: relative;
+  background: #fff;
+  color: #000;
+  padding: 80px 0px;
+}
+.view-more {
+  text-decoration: none;
+  color: #8d28ad;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.carousel-item .carousel-image {
+  min-height: 350px;
+  max-height: 350px;
+  border-radius: 10px;
+}
+.biography {
+  background-color: #8d28ad;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 0;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.rating span {
+  opacity: 0.5;
+}
+.topten .shadow {
+  height: 100%;
+  width: 30%;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  background: #fff;
+  z-index: 10;
+  background: rgb(69, 19, 85);
+  background: linear-gradient(
+    270deg,
+    rgba(69, 19, 85, 1) 0%,
+    rgba(69, 19, 85, 0.6643791305584734) 100%
+  );
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1;
+}
+
+.arrow {
+  padding: 15px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
+}
+.cart {
+  position: relative;
+  background-color: #eedff3;
+  padding: 15px;
+  border-radius: 10px;
+}
+.cart-container {
+  position: relative;
+}
+.cart-btn {
+  background-color: #8d28ad !important;
+  padding: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%; /* Adjust as needed */
+  right: -25px; /* Adjust as needed */
+  transform: translateY(-50%); /* Center vertically */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.feature-card {
+  background: #fafafa;
+  border-radius: 10px;
+}
+@media (max-width: 1400px) {
+  .carousel-item .carousel-image {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .topten h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+  }
+  .carousel-item .carousel-image {
+    max-width: 150px;
+  }
+}
+
+.carousel-item {
+  padding: 20px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.carousel-indicators button {
+  background-color: #000;
+}
+
+.testimonial-section {
+  padding: 50px 0;
+}
+
+.testimonial-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.arrow img {
+  width: 30px;
+  height: 30px;
+}
+
+.carousel-item .d-flex {
+  flex: 1 1 20%; /* Adjust the width of each card */
+}
+
+.price {
+  color: #8d28ad;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.add-to-cart button {
+  padding: 15px 20px;
+  background: #8d28ad;
+  color: white;
+  border-radius: 10px;
+  border: none;
+}
+
+.testimonial-section .carousel-inner {
+  position: relative;
+  overflow: hidden; /* Ensure the gradient doesn't overflow */
+}
+
+.testimonial-section .carousel-inner::before,
+.testimonial-section .carousel-inner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px; /* Adjust the width of the gradient */
+  z-index: 2; /* Ensure the gradient is above the cards */
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+.testimonial-section .carousel-inner::before {
+  left: 0;
+  background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+}
+
+.testimonial-section .carousel-inner::after {
+  right: 0;
+  background: linear-gradient(to left, white, rgba(255, 255, 255, 0));
+}

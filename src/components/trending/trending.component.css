@@ -1,0 +1,138 @@
+/* instructors */
+.trending {
+  margin: 40px 0px;
+}
+h1 {
+  font-weight: bolder;
+}
+.accordion {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  gap: 16px;
+  transition: 0.3s;
+}
+.accordion li {
+  position: relative;
+  overflow: hidden;
+  flex-basis: 260px;
+  border-radius: 35px;
+  cursor: pointer;
+}
+
+.accordion li img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.accordion li,
+.accordion li img,
+.accordion li .content,
+.accordion li .content span {
+  transition: 0.3s;
+}
+.accordion h2 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 45px;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+.accordion li .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  color: white;
+  padding: 15px;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.7) 10%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  opacity: 0;
+  visibility: hidden;
+}
+.accordion:hover {
+  gap: 16px;
+}
+.accordion li .content span {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 50px;
+  translate: -50%;
+  scale: 0.85;
+  visibility: hidden;
+  opacity: 0;
+}
+#forthLi {
+  flex: 0 1 350px;
+}
+.accordion li:hover {
+  flex: 0 1 350px;
+  scale: 1;
+  z-index: 10;
+  opacity: 1;
+}
+
+.accordion li:hover .content {
+  opacity: 1;
+  visibility: visible;
+}
+.accordion li:hover span {
+  scale: 1;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* media */
+@media screen and (max-width: 1280px) {
+  .accordion li {
+    flex-basis: 110px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .accordion li {
+    flex-basis: 80px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .accordion {
+    height: fit-content;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .accordion li img {
+    position: unset;
+    translate: unset;
+    height: auto;
+  }
+  .accordion li {
+    flex-basis: 300px;
+  }
+  .accordion li .content,
+  .accordion li .content span,
+  .accordion li {
+    opacity: 1;
+    visibility: visible;
+  }
+  .accordion li .content span {
+    bottom: 20px;
+    border: 1rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  .accordion li img {
+    height: 100%;
+  }
+}
